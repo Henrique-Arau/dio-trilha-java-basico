@@ -5,12 +5,13 @@ import java.util.Scanner;
 
 public class ContaTerminal {
     public static void main(String[] args) {
-        Conta minhaConta = new Conta(10, "157-20", "Maria", 152.12F);
+        Conta minhaConta = new Conta(10, "157-20", "Maria", 152.12F, "");
         try (Scanner leitura = new Scanner(System.in)) {
             String nomeCliente;
             int numero, op;
             String agencia;
             Float saldo;
+            String dadosCliente;
                 do{
                     System.out.println("----- * Menu * > Conta Bancaria-----");
                     
@@ -24,27 +25,25 @@ public class ContaTerminal {
                     switch(op){
                         
                         case 1 :  
+                            System.out.println("--------------Digite seus dados--------------"); 
+                            dadosCliente = leitura.nextLine();
+
                             System.out.println("Entre com o nome do cliente:"); 
                             nomeCliente = leitura.nextLine();
                     
-                            
 
                             System.out.println("Entre com a Agencia: "); 
                             agencia = leitura.nextLine();
-    
-            
-                             
+     
                             
                             System.out.println("Entre com o Numero: "); 
                             numero = leitura.nextInt();
 
 
-                          
-
                             System.out.println("Entre com o saldo");
                             saldo = leitura.nextFloat();
 
-                            minhaConta.ContaBanco(nomeCliente, agencia, numero, saldo);
+                            minhaConta.ContaBanco(nomeCliente, agencia, numero, saldo, dadosCliente);
                             
                             break;
                             case 2 :

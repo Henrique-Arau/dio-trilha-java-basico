@@ -10,16 +10,30 @@ public class Conta {
     private String Agencia; 
     private String NomeCliente;
     private Float Saldo;
+    private String DadosCliente;
 
-    public  Conta(String nomeCliente2, String agencia2, int numero2, Float saldo2) {
+    public String getDadosCliente() {
+        return DadosCliente;
+    }
+
+
+    public void setDadosCliente(String dadosCliente) {
+        DadosCliente = dadosCliente;
+    }
+
+
+    public  Conta(String nomeCliente2, String agencia2, int numero2, Float saldo2, String dadosCliente) {
         Numero = 10;
-        Agencia = "157-20";
-        NomeCliente = "Maria" ;
+        Agencia = "";
+        NomeCliente = "" ;
         Saldo = 152.12F;
+        DadosCliente = "";
     }
     
-   
-    public Conta(int i, String agencia2, String string, float saldo2) {
+
+
+
+    public Conta(int i, String agencia2, String string, float saldo2, String dadosCliente2) {
     }
 
 
@@ -49,12 +63,13 @@ public class Conta {
     }
 
 
-    public void ContaBanco(String nomeCliente2, String agencia2, int numero2, Float saldo2) {
+    public void ContaBanco(String nomeCliente2, String agencia2, int numero2, Float saldo2, String dadosCliente) {
 
         this.Numero = numero2;
         this.Agencia = agencia2;
         this.NomeCliente = nomeCliente2 ;
         this.Saldo = saldo2;
+        this.DadosCliente = dadosCliente;
     }
 
 
